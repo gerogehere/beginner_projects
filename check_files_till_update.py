@@ -6,7 +6,7 @@ while True:
         lines = f.readlines()
 
         print("Reading file...")
-        # Check for something in the file
+    
         if keyword in "".join(lines):
             print("Found the keyword!")
         
