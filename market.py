@@ -42,7 +42,6 @@ while True:
            list_of_items_in_cart.append(user_choice)
            print("Items in your Card:", list_of_items_in_cart)
        else:
-           # Don't try to remove if we never added it
            print("Items in your Card:", list_of_items_in_cart)
     elif user_choice == "q":
         print("this will be:", total_sum_selected(products, list_of_items_in_cart), "$")
