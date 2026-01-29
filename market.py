@@ -15,10 +15,12 @@ products = {
 
 def displayinvetory(products):
  for item, details, in products.items():
-    print(f"{item}: ${details['price']} {details["stock"]}")
-
-
+    print(f"{item}: ${details['price']} stock {details["stock"]}")
 displayinvetory(products)
+
+
+
+
 def total_sum_selected(products, list_of_items_in_cart):
     total = 0
     for item in list_of_items_in_cart:  
@@ -50,16 +52,16 @@ while True:
         total = total_sum_selected(products, list_of_items_in_cart)
 
         if user_pay_choice == "cash":
-            wallet_after_pay = wallet - total
-            print("Current Wallet Balance:", wallet_after_pay, "$")
+            wallet = wallet - total
+            print("Current Wallet Balance:", wallet, "$")
             print("here's your receipt:")
             for x in list_of_items_in_cart:
                 print(x)
             print("Thank you for Shopping")
 
         elif user_pay_choice == "credit card":
-            credit_card_after_pay = credit_card - total
-            print("Credit Card Current Balance:", credit_card_after_pay, "$")
+            credit_card = credit_card - total
+            print("Credit Card Current Balance:", credit_card, "$")
             print("here's your receipt:")
             for x in list_of_items_in_cart:
                 print(x)
@@ -70,4 +72,5 @@ while True:
     else:
         print("item is not in our Inventory!")
         print(list_of_items_in_cart)
+
 
